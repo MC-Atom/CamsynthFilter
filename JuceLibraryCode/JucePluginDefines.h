@@ -53,7 +53,7 @@
  #define JucePlugin_ManufacturerWebsite    "https://devynoh.dev"
 #endif
 #ifndef  JucePlugin_ManufacturerEmail
- #define JucePlugin_ManufacturerEmail      "devynoh@devynoh.dev"
+ #define JucePlugin_ManufacturerEmail      "devyn@devynoh.dev"
 #endif
 #ifndef  JucePlugin_ManufacturerCode
  #define JucePlugin_ManufacturerCode       0x4d616e75

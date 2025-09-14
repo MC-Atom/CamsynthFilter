@@ -9,16 +9,17 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "SocketServer.h"
 
 //==============================================================================
 /**
 */
-class NewProjectAudioProcessor  : public juce::AudioProcessor
+class CamsynthFilterAudioProcessor  : public juce::AudioProcessor
 {
 public:
     //==============================================================================
-    NewProjectAudioProcessor();
-    ~NewProjectAudioProcessor() override;
+    CamsynthFilterAudioProcessor();
+    ~CamsynthFilterAudioProcessor() override;
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -52,8 +53,20 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
+    //juce::dsp::FIR::Filter<float>::CoefficientsPtr firCoefPnr =  juce::dsp::FIR::Coefficients<NumericType>::Ptr
+    //juce::dsp::ProcessorDuplicator<juce::dsp::FIR::Filter<float>,juce::dsp::FIR::Coefficients<float>> fir;
+
+	std::unique_ptr<SocketServer> socketServer;
+    juce::dsp::LadderFilter<float> ladder;
+    std::atomic<int> cutFreq;
+    std::atomic<int> bias;
+    std::atomic<int> midpoint;
+    std::atomic<float> filterScalar;
+    juce::Label httpState;
+
+    float filterCutoff { 0.5 };
 
 private:
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NewProjectAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (CamsynthFilterAudioProcessor)
 };

@@ -2,10 +2,13 @@
 
 <JUCERPROJECT id="SNNX10" name="CamsynthFilter" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="Atom's Synth Smithing"
-              companyWebsite="https://devynoh.dev" companyEmail="devynoh@devynoh.dev"
+              companyWebsite="https://devynoh.dev" companyEmail="devyn@devynoh.dev"
               pluginVST3Category="Filter">
   <MAINGROUP id="Amg7lr" name="CamsynthFilter">
     <GROUP id="{F3B712E7-A009-2608-ECF2-44AC9DF80D3F}" name="Source">
+      <FILE id="yhY5dG" name="SocketServer.cpp" compile="1" resource="0"
+            file="Source/SocketServer.cpp"/>
+      <FILE id="DzNxkW" name="SocketServer.h" compile="0" resource="0" file="Source/SocketServer.h"/>
       <FILE id="wl7qzV" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="aTT81N" name="PluginProcessor.h" compile="0" resource="0"
@@ -25,6 +28,7 @@
     <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
@@ -50,6 +54,7 @@
         <MODULEPATH id="juce_graphics" path="../../../../../JUCE/modules"/>
         <MODULEPATH id="juce_gui_basics" path="../../../../../JUCE/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../../../../JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
   </EXPORTFORMATS>
