@@ -3,7 +3,7 @@
 <JUCERPROJECT id="SNNX10" name="CamsynthFilter" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="Atom's Synth Smithing"
               companyWebsite="https://devynoh.dev" companyEmail="devyn@devynoh.dev"
-              pluginVST3Category="Filter">
+              pluginVST3Category="Filter" pluginManufacturer="ATSS" pluginManufacturerCode="At1m">
   <MAINGROUP id="Amg7lr" name="CamsynthFilter">
     <GROUP id="{F3B712E7-A009-2608-ECF2-44AC9DF80D3F}" name="Source">
       <FILE id="yhY5dG" name="SocketServer.cpp" compile="1" resource="0"
